@@ -4,7 +4,8 @@
 Temp/
 Obj/
 UnityGenerated/
-petitBateau/Library/
+/petitBateau/Library/
+/Library/
 Assets/AssetStoreTools*
 
 # ===================================== #
