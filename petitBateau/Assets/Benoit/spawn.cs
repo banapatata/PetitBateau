@@ -5,6 +5,8 @@ using UnityEngine;
 public class spawn : MonoBehaviour {
 
 	private float now;
+	private float xModifier = 12.0f;
+	private float yModifier = 5.0f;
 
 	[SerializeField]
 	private float timerSpawn;
@@ -28,36 +30,36 @@ public class spawn : MonoBehaviour {
 	}
 
 	void spawnRocks(int rand){
-		float distance = Camera.main.ScreenToWorldPoint(new Vector2(0.0f,Screen.height)).y / 10;
-		Debug.Log (rand);
+		float distance = Camera.main.ScreenToWorldPoint(new Vector2(0.0f,Screen.height)).y / 5;
 		switch (rand) {
 		case 0:
-			Instantiate (Rocher, new Vector2 (0.0f, 3 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, Random.value * 10 * distance-4.5f), Quaternion.identity);
 			break;
 		case 1:
-			Instantiate (Rocher, new Vector2 (0.0f, 7 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 7.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 9.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 2:
-			Instantiate (Rocher, new Vector2 (0.0f, 2 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 8 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 2.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 8.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 3:
-			Instantiate (Rocher, new Vector2 (0.0f, 3 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 4 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 5 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 3.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 4.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 5.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 4:
-			Instantiate (Rocher, new Vector2 (0.0f, 6 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 8 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 6.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 8.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 5:
-			Instantiate (Rocher, new Vector2 (0.0f, 2 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 5 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 2.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 5.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 6:
-			Instantiate (Rocher, new Vector2 (0.0f, 1 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 5 * distance), Quaternion.identity);
-			Instantiate (Rocher, new Vector2 (0.0f, 8 * distance), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 1.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 5.0f * distance-yModifier), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, 8.0f * distance-yModifier), Quaternion.identity);
 			break;
 		}
 	}
