@@ -17,6 +17,8 @@ public class spawn : MonoBehaviour
 	private GameObject Rock;
 	[SerializeField]
 	private GameObject Bird;
+	[SerializeField]
+	private GameObject Crate;
 
 	// Use this for initialization
 	void Start () {
@@ -136,10 +138,18 @@ public class spawn : MonoBehaviour
 			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
 			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
 			break;
-            case 2:
+        case 2:
 			Instantiate(Bird, new Vector2(xModifier, pos1 - yModifier), Quaternion.identity);
                 break;
-            default:
+		case 3:
+			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
+			Instantiate (Crate, new Vector2 (xModifier, pos1 - yModifier), rotate);
+			break;
+		case 4:
+			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
+			Instantiate (Crate, new Vector2 (xModifier, pos1 - yModifier), rotate);
+			break;
+        default:
 			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
 			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
 			if (pos1 != pos2) {
