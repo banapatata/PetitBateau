@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scrolling : MonoBehaviour {
 
 	[SerializeField]
-	private Vector2 speed;
+	private Vector2 speed = new Vector2(-3.0f,0.0f);
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,11 @@ public class Scrolling : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//if (isAlive) {
-			
-		//}
+		/*if (!isAlive) {
+			GetComponent<Rigidbody2D> ().velocity = 0;
+		}*/
+		if (transform.position.x + 12 < 0) {
+			Destroy (gameObject);
+		}
 	}
 }
