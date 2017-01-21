@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 58753016061800940}
   - component: {fileID: 212101565246858776}
   - component: {fileID: 50148493562390224}
-  m_Layer: 10
+  - component: {fileID: 114673397565393094}
+  m_Layer: 0
   m_Name: Scrap
   m_TagString: Enemi
   m_Icon: {fileID: 0}
@@ -76,6 +77,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114673397565393094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889081930517344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5d6f4f4e731c64a9070310b0973194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212101565246858776
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +119,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 712847187
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63133cac44b83cb469ea3f1d37b905e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b306f79d2cc5aa149825479d91baacc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
