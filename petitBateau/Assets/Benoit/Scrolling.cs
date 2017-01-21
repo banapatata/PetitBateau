@@ -14,9 +14,9 @@ public class Scrolling : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (!isAlive) {
-			GetComponent<Rigidbody2D> ().velocity = 0;
-		}*/
+		if (!GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().getIsAlive()) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2(0.0f,0.0f);
+		}
 		if (transform.position.x + 12 < 0) {
 			Destroy (gameObject);
 		}
