@@ -37,6 +37,6 @@ public class boatController : MonoBehaviour
                 inpulse += Vector2.down;
             }
         }
-        boatBehaviour.hitByWave(inpulse);
+        boatBehaviour.HitByWave(inpulse);
     }
 }
