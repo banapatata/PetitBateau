@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4731590973724276}
   - component: {fileID: 114921163297216506}
+  - component: {fileID: 114762209358991058}
   m_Layer: 0
   m_Name: PlayerController
-  m_TagString: Untagged
+  m_TagString: PlayerController
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114762209358991058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210994414897840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0f0d2f486cb1a43a5aa505bb5a3d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnergie: 10
+  healthBarSlider: {fileID: 0}
+  loadSpeed: 0.003
 --- !u!114 &114921163297216506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,4 +67,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wave: {fileID: 1201972485184822, guid: 6642e60d92b79d645ac5736261f36580, type: 2}
-  waveVector: {x: 0, y: 0}
