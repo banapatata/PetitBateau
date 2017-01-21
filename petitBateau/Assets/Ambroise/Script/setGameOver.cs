@@ -24,7 +24,8 @@ public class setGameOver : MonoBehaviour {
 
     public void GameOver()
     {
-        GameOverText.text = "Game Over \nPush space";
+		scoring.updateScore ();
+		GameOverText.text = "Game Over \nPush space\n\nScore : " + scoring.score+"\nHigh Score : "+scoring.highscore;
         isAlive = false;
     }
 
