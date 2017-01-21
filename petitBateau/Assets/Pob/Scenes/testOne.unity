@@ -143,11 +143,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4856453491345818, guid: c24368b369aa7bc44bb321c236b8370b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.36
       objectReference: {fileID: 0}
     - target: {fileID: 4856453491345818, guid: c24368b369aa7bc44bb321c236b8370b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4856453491345818, guid: c24368b369aa7bc44bb321c236b8370b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -468,20 +468,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223638980701385430, guid: c704049ea751bd146a6dd76943094bed,
-        type: 2}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1889805556120664, guid: c704049ea751bd146a6dd76943094bed, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1889805556120664, guid: c704049ea751bd146a6dd76943094bed, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -3701561207968579530, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c704049ea751bd146a6dd76943094bed, type: 2}
   m_IsPrefabParent: 0
@@ -578,6 +564,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694094002 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1210994414897840, guid: 81ae597240baead4ab249c6e9323ef29,
+    type: 2}
+  m_PrefabInternal: {fileID: 1248189952}
+--- !u!114 &1694094003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1694094002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0f0d2f486cb1a43a5aa505bb5a3d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnergie: 0
+  healthBarSlider: {fileID: 0}
+  loadSpeed: 0.005
 --- !u!1 &1921449413
 GameObject:
   m_ObjectHideFlags: 0

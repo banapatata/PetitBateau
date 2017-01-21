@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Charge : MonoBehaviour
 {
-
     private Animator myAnimator;
 
     [SerializeField]
@@ -12,7 +11,6 @@ public class Charge : MonoBehaviour
 
     private int state;
 
-    // Use this for initialization
     void Start()
     {
         myAnimator = this.GetComponent<Animator>();
@@ -23,15 +21,16 @@ public class Charge : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().getIsAlive())
         {
-            myAnimator.SetInteger("base", state);
-                if (state == 5)
-            {
-                //transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
-                Vector3 dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                transform.position += transform.right * Time.deltaTime * movementSpeed;
-            }
+			myAnimator.SetInteger ("status", state);
+                if (state == 6)
+            	{
+	                //transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+				Vector3 dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+				float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
+				transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+				transform.position += -transform.up * Time.deltaTime * movementSpeed;
+				Debug.Log ("charge en cours");
+	            }
         }
     }
 
