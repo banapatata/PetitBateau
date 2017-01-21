@@ -10,25 +10,24 @@ public class waveBehavior : MonoBehaviour {
 	private Vector2 direction;
 	float spawnTime;
 	public float ttl = 2;
+	bool boatAlreadyTouched = false;
 
 	void Start () {
 		rb = GetComponent <Rigidbody2D> ();
-		initMove (direction);
+		InitMove (direction);
 		Destroy (gameObject, ttl);
 	}
 
 	void Update () {
 	}
 
-	public void initMove (Vector2 vector) {
-		Debug.Log ("vector : " + vector);
+	public void InitMove (Vector2 vector) {
 		if (vector.magnitude < 1f) {
 			vector.Normalize ();
 		} else if (vector.magnitude > 10f) {
 			vector.Normalize ();
 			vector *= 10f;
 		}
-		Debug.Log ("vector after normalized : " + vector);
 		transform.up = vector;
 		rb.AddForce (vector, ForceMode2D.Impulse);
 	}
@@ -40,4 +39,14 @@ public class waveBehavior : MonoBehaviour {
 	public Vector2 getDirection () {
 		return direction;
 	}
+
+	public void setBoatAlreadyTouched (bool touched) {
+		boatAlreadyTouched = touched;
+	}
+
+	public bool getBoatAlreadyTouched () {
+		return boatAlreadyTouched;
+	}
+
+
 }

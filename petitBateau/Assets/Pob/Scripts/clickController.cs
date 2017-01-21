@@ -22,6 +22,7 @@ public class clickController : MonoBehaviour {
 			endPos = cam.ScreenToWorldPoint (Input.mousePosition);
 			waveVector = endPos - startPos;
 			GameObject newWave = Instantiate (wave, new Vector3 (startPos.x, startPos.y, 0), transform.rotation) as GameObject;
+			newWave.name = "PlayerWave";
 			newWave.GetComponent <waveBehavior> ().setDirection (waveVector);
 		}
 	}
