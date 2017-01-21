@@ -16,7 +16,10 @@ public class clickController : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			endPos = Input.mousePosition;
 			waveVector = endPos - startPos;
-			GameObject newWave = Instantiate (wave, new Vector3 (waveVector.x, waveVector.y, 0), transform.rotation);
+			Debug.Log (startPos);
+			Debug.Log (waveVector);
+			GameObject newWave = Instantiate (wave, new Vector3 (startPos.x, startPos.y, 0), transform.rotation);
+			Debug.Break ();
 			newWave.GetComponent <waveBehavior> ().initMove (waveVector);
 		}
 	}

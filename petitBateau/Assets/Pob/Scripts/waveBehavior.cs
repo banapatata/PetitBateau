@@ -8,7 +8,7 @@ public class waveBehavior : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent <Rigidbody2D> ();
-		initMove (Vector2.right * 4);
+//		initMove (Vector2.right * 4);
 	}
 
 	public void initMove (Vector2 vector) {
