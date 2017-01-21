@@ -9,7 +9,7 @@ public class playerInZone : MonoBehaviour
     [SerializeField]
     private float timerState = 5.0f;
     private int newState = 0;
-    private bool iPlayerIn;
+    private bool isPlayerIn;
     private bool isCharge = false;
 
     // Use this for initialization
@@ -23,25 +23,19 @@ public class playerInZone : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().getIsAlive())
         {
-            if (iPlayerIn && now + timerState < Time.time && newState < 5)
+            if (isPlayerIn && now + timerState < Time.time && newState < 6)
             {
-
-
-                newState = newState + 1;
-
+                newState += 1;
                 transform.Find("Enemi").GetComponent<Charge>().setState(newState);
-
                 now = Time.time;
-
-                isCharge = true;
-
+				if (newState <= 5) {
+					isCharge = true;
+				}
             }
-            else if (!iPlayerIn && now + timerState < Time.time && newState > 0 && !isCharge)
+            else if (!isPlayerIn && now + timerState < Time.time && newState > 0 && !isCharge)
             {
-                newState = newState - 1;
-
+                newState -= 1;
                 transform.Find("Enemi").GetComponent<Charge>().setState(newState);
-
                 now = Time.time;
             }
         }
@@ -50,9 +44,8 @@ public class playerInZone : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            iPlayerIn = true;
+            isPlayerIn = true;
             now = Time.time;
-
         }
     }
 
@@ -60,11 +53,8 @@ public class playerInZone : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
-
-            iPlayerIn = false;
+            isPlayerIn = false;
             now = Time.time;
-
         }
     }
 }
