@@ -29,14 +29,25 @@ public class waveBehavior : MonoBehaviour {
 	}
 
 	public void InitMove (Vector2 vector) {
-		if (vector.magnitude < minForce) {
+        if (vector.magnitude > maxForce)
+        {
+            vector.Normalize();
+            vector *= maxForce;
+        }
+
+        float magni = vector.magnitude;
+        float newmagni = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<WaveBarBehavior>().UpdateWaveBar(magni);
+        if (newmagni != magni  )
+        {
+            vector.Normalize();
+            vector *= newmagni;
+        }
+        if (vector.magnitude < minForce) {
 			vector.Normalize ();
-		} else if (vector.magnitude > maxForce) {
-			vector.Normalize ();
-			vector *= maxForce;
 		}
-		vector *= power;
-		transform.up = vector;
+        vector *= power;
+        Debug.Log(vector.magnitude);
+        transform.up = vector;
 		rb.AddForce (vector, ForceMode2D.Impulse);
 	}
 
