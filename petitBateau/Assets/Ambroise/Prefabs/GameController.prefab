@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114896180308281464}
   - component: {fileID: 114494788920194994}
   - component: {fileID: 114071387701881426}
+  - component: {fileID: 114523794486782366}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298470029971014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.41, y: -5.85, z: 0.0625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,9 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8642bf34986ced643961d4e0872ed311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerSpawn: 2
+  timerSpawn: 1
   Rock: {fileID: 1370432834764432, guid: ac725dda7ed819f4c92f1fdf44013baf, type: 2}
-  Bird: {fileID: 1049812770487628, guid: 97c4be443c4d22848816b033b1c5c874, type: 2}
+  Bird: {fileID: 1782224288005394, guid: 951a04fb6c2997b40ab3586ca95c7a4a, type: 2}
 --- !u!114 &114494788920194994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +69,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Background: {fileID: 1356390059360664, guid: 2a8bfc90e1359cf46a68272717316ce6, type: 2}
+--- !u!114 &114523794486782366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298470029971014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e4b03d1f28e544bb1de69a8880b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114896180308281464
 MonoBehaviour:
   m_ObjectHideFlags: 1
