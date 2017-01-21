@@ -293,6 +293,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 

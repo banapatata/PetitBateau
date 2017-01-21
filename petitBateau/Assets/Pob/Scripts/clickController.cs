@@ -7,7 +7,7 @@ public class clickController : MonoBehaviour {
 	public GameObject wave;
 	private Vector2 startPos;
 	private Vector2 endPos;
-	public Vector2 waveVector;
+	private Vector2 waveVector;
 	Camera cam;
 
 	void Start () {
