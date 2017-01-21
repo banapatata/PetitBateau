@@ -66,6 +66,4 @@ public class waveBehavior : MonoBehaviour {
 	public bool getBoatAlreadyTouched () {
 		return boatAlreadyTouched;
 	}
-
-
 }
