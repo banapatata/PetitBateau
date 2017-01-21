@@ -9,7 +9,7 @@ public class spawn : MonoBehaviour
 	private float yModifier = 5.0f;
 	private int lastRand = 0;
 
-	private int nbcases = 13;
+	private int nbcases = 10;
 
     [SerializeField]
     private float timerSpawn;
@@ -25,7 +25,7 @@ public class spawn : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (now + timerSpawn < Time.time) {
+		if ((now + timerSpawn < Time.time) && GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().getIsAlive()) {
 			int rand = (int)(Random.value *nbcases);
 
 			// pour eviter d'avoir deux fois le meme patern a la suite
@@ -40,8 +40,11 @@ public class spawn : MonoBehaviour
 	}
 
 	void spawnRocks(int rand){
+		int pos1 = (int)(Random.value * 9) + 1;
+		int pos2 = (int)(Random.value * 9) + 1;
+		Quaternion rotate;
 		switch (rand) {
-		case 0:
+		/*case 0:
 			Instantiate (Rock, new Vector2 (xModifier, (int)(Random.value * 9)+1-yModifier), Quaternion.identity);
 			break;
 		case 1:
@@ -123,6 +126,22 @@ public class spawn : MonoBehaviour
 		case 12:
 			Instantiate (Bird, new Vector2 (1.0f + xModifier, (int)(Random.value * 4) + 3 - yModifier), Quaternion.identity);
 			now = now + 1.5f;
+			break;
+		}*/
+
+		case 0:
+			break;
+		case 1:
+			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
+			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
+			break;
+		default:
+			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
+			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
+			if (pos1 != pos2) {
+				rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
+				Instantiate (Rock, new Vector2 (xModifier, pos2 - yModifier), rotate);
+			}
 			break;
 		}
 	}
