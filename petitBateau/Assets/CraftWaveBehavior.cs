@@ -40,7 +40,7 @@ public class CraftWaveBehavior : MonoBehaviour
             Actualscrap = Instantiate(scrap, transform.position + new Vector3(-0.02f, 0.02f), Quaternion.identity);
             Actualscrap.GetComponent<Rigidbody2D>().AddForce(new Vector2(random1, random2) * speed);
             random1 = Random.Range(-1.0f, 1.0f);
-            random2 = Random.Range(-1.0f, 1.0f   );
+            random2 = Random.Range(-1.0f    , 1.0f   );
             Actualscrap = Instantiate(scrap, transform.position + new Vector3(0.02f, -  0.02f), Quaternion.identity);
             Actualscrap.GetComponent<Rigidbody2D>().AddForce(new Vector2(random1, random2) * speed);
             Destroy(this.gameObject);
