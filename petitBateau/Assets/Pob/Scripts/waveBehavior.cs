@@ -14,10 +14,8 @@ public class waveBehavior : MonoBehaviour {
 
 	// *** Variables modifiables ***
 	private float ttl = 2;
-	private float power = 1;
 	private float minForce = 5f;
 	private float maxForce = 10f;
-	private float maxSize = 1;
 	// ***
 
 	void Start () {
@@ -38,7 +36,7 @@ public class waveBehavior : MonoBehaviour {
 
         float magni = vector.magnitude;
         float newmagni = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<WaveBarBehavior>().UpdateWaveBar(magni);
-        if (newmagni != magni  )
+        if (newmagni != magni)
         {
             vector.Normalize();
             vector *= newmagni;
@@ -48,6 +46,8 @@ public class waveBehavior : MonoBehaviour {
             vector *= minForce;
         }
         transform.right = vector;
+		float size = vector.magnitude / maxForce;
+		transform.localScale = new Vector3 (1, size, 1);
 		rb.AddForce (vector, ForceMode2D.Impulse);
 	}
 
