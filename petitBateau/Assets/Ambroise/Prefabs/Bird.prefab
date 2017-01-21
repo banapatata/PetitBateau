@@ -156,7 +156,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 6
 --- !u!61 &61182039664924106
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edb4d9f7b8229f41a6bc7011bac0604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerState: 0.3
+  timerState: 0.2
 --- !u!212 &212437080876706816
 SpriteRenderer:
   m_ObjectHideFlags: 1

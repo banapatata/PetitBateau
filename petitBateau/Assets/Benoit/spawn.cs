@@ -136,7 +136,11 @@ public class spawn : MonoBehaviour
 			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
 			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
 			break;
-		default:
+            case 2:
+                rotate = Quaternion.Euler(0, 0, Random.Range(0, 360));
+                Instantiate(Bird, new Vector2(xModifier, pos1 - yModifier), rotate);
+                break;
+            default:
 			rotate = Quaternion.Euler (0, 0, Random.Range (0, 360));
 			Instantiate (Rock, new Vector2 (xModifier, pos1 - yModifier), rotate);
 			if (pos1 != pos2) {
