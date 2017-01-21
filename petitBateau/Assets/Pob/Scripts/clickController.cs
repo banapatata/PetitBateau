@@ -8,19 +8,21 @@ public class clickController : MonoBehaviour {
 	private Vector2 startPos;
 	private Vector2 endPos;
 	public Vector2 waveVector;
+	Camera cam;
+
+	void Start () {
+		cam = Camera.main;
+	}
 
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
-			startPos = Input.mousePosition;
+			startPos = cam.ScreenToWorldPoint (Input.mousePosition);
 		}
 		if (Input.GetMouseButtonUp (0)) {
-			endPos = Input.mousePosition;
+			endPos = cam.ScreenToWorldPoint (Input.mousePosition);
 			waveVector = endPos - startPos;
-			Debug.Log (startPos);
-			Debug.Log (waveVector);
-			GameObject newWave = Instantiate (wave, new Vector3 (startPos.x, startPos.y, 0), transform.rotation);
-			Debug.Break ();
-			newWave.GetComponent <waveBehavior> ().initMove (waveVector);
+			GameObject newWave = Instantiate (wave, new Vector3 (startPos.x, startPos.y, 0), transform.rotation) as GameObject;
+			newWave.GetComponent <waveBehavior> ().setDirection (waveVector);
 		}
 	}
 }
