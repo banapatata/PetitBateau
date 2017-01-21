@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114634267792569880}
   - component: {fileID: 212826516624925718}
   - component: {fileID: 61211751053829276}
+  - component: {fileID: 114301696605942690}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Untagged
@@ -56,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114301696605942690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177501887661582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ecf7971cd92a948ba857990d2043ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: -3, y: 0}
 --- !u!114 &114634267792569880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 712847187
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f8a6afd6aaeb6de4cbaf7386017f8192, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17e67c5a013144f4fb9c7168da4f446a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -19,7 +19,7 @@ public class boatBehaviour : MonoBehaviour
     public void HitByWave(Vector2 wave)
     {
 
-        rb.AddForce(wave * 1f, ForceMode2D.Impulse);
+        rb.AddForce(wave * 1.0f, ForceMode2D.Impulse);
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {

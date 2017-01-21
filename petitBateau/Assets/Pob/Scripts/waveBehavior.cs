@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(Animator))]
 
 public class waveBehavior : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class waveBehavior : MonoBehaviour {
 	// *** Variables modifiables ***
 	private float ttl = 2;
 	private float power = 1;
-	private float minForce = 1f;
+	private float minForce = 5f;
 	private float maxForce = 10f;
 	private float maxSize = 1;
 	// ***
@@ -29,14 +30,24 @@ public class waveBehavior : MonoBehaviour {
 	}
 
 	public void InitMove (Vector2 vector) {
-		if (vector.magnitude < minForce) {
+        if (vector.magnitude > maxForce)
+        {
+            vector.Normalize();
+            vector *= maxForce;
+        }
+
+        float magni = vector.magnitude;
+        float newmagni = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<WaveBarBehavior>().UpdateWaveBar(magni);
+        if (newmagni != magni  )
+        {
+            vector.Normalize();
+            vector *= newmagni;
+        }
+        if (vector.magnitude < minForce) {
 			vector.Normalize ();
-		} else if (vector.magnitude > maxForce) {
-			vector.Normalize ();
-			vector *= maxForce;
-		}
-		vector *= power;
-		transform.up = vector;
+            vector *= minForce;
+        }
+        transform.right = vector;
 		rb.AddForce (vector, ForceMode2D.Impulse);
 	}
 
