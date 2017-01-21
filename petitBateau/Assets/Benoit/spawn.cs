@@ -37,7 +37,6 @@ public class spawn : MonoBehaviour
     void spawnRocks(int rand)
     {
         float distance = Camera.main.ScreenToWorldPoint(new Vector2(0.0f, Screen.height)).y / 10;
-        Debug.Log(rand);
         switch (rand)
         {
             case 0:
