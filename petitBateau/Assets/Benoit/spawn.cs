@@ -61,6 +61,7 @@ public class spawn : MonoBehaviour {
 			Instantiate (Rocher, new Vector2 (xModifier, 7.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 5:
+			Instantiate (Rocher, new Vector2 (xModifier, 1.0f * distance-yModifier), Quaternion.identity);
 			Instantiate (Rocher, new Vector2 (xModifier, 2.0f * distance-yModifier), Quaternion.identity);
 			Instantiate (Rocher, new Vector2 (xModifier, 5.0f * distance-yModifier), Quaternion.identity);
 			break;
@@ -84,7 +85,7 @@ public class spawn : MonoBehaviour {
 			Instantiate (Rocher, new Vector2 (xModifier, 9.0f * distance-yModifier), Quaternion.identity);
 			break;
 		case 9:
-			Instantiate (Rocher, new Vector2 (xModifier, Random.value * 9 * distance-4.5f), Quaternion.identity);
+			Instantiate (Rocher, new Vector2 (xModifier, Random.value * 9 * distance-4.0f), Quaternion.identity);
 			break;
 		}
 	}
