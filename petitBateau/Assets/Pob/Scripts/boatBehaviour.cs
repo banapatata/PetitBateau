@@ -10,6 +10,7 @@ public class boatBehaviour : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		child = transform.Find ("Sprite").transform;
+		hitByWave (Vector2.right);
 	}
 
 	void Update () {
