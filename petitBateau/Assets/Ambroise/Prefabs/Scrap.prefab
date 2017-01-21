@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 58753016061800940}
   - component: {fileID: 212101565246858776}
   - component: {fileID: 50148493562390224}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scrap
-  m_TagString: Untagged
+  m_TagString: Enemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
