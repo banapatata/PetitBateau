@@ -46,6 +46,7 @@ public class waveBehavior : MonoBehaviour {
         if (vector.magnitude < minForce) {
 			vector.Normalize ();
 		}
+        transform.right = vector;
 		rb.AddForce (vector, ForceMode2D.Impulse);
 	}
 
