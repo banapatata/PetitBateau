@@ -25,6 +25,6 @@ public class boatController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			inpulse += Vector2.down;
 		}
-		boatBehaviour.hitByWave (inpulse);
+		boatBehaviour.HitByWave (inpulse);
 	}
 }
