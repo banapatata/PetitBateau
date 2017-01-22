@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 1
   minForce: 5
-  maxForce: 10
+  maxForce: 12
 --- !u!212 &212449088268111334
 SpriteRenderer:
   m_ObjectHideFlags: 1

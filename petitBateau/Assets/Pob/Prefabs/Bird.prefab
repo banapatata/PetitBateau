@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abe0cd93b2e65d4f834b627b427a642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 20
 --- !u!114 &114670974977947402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edb4d9f7b8229f41a6bc7011bac0604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerState: 0.17
+  timerState: 0.25
 --- !u!114 &114782106553285908
 MonoBehaviour:
   m_ObjectHideFlags: 1
