@@ -49,12 +49,7 @@ public class CraftWaveBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Wave")
         {
-<<<<<<< HEAD
-            if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < 6.0f && isAlive)
-=======
-
-            if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < forceToBreak)
->>>>>>> refs/remotes/origin/master
+			if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < forceToBreak && isAlive)
             {
                 if (!other.gameObject.GetComponent<waveBehavior>().getBoatAlreadyTouched())
                 {
