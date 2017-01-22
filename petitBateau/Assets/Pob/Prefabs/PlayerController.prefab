@@ -52,9 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0f0d2f486cb1a43a5aa505bb5a3d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxEnergie: 10
-  healthBarSlider: {fileID: 0}
+  MaxEnergie: 20
+  Bar: {fileID: 0}
+  Fill: {fileID: 0}
   loadSpeed: 0.003
+  minForce: 5
 --- !u!114 &114921163297216506
 MonoBehaviour:
   m_ObjectHideFlags: 1
