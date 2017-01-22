@@ -22,6 +22,12 @@ public class boatBehaviour : MonoBehaviour
         rb.AddForce(wave * 1.0f, ForceMode2D.Impulse);
     }
 
+
+    public void Die()
+    {
+        Destroy(this.gameObject);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         
