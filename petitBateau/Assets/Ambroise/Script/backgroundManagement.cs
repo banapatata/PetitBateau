@@ -17,7 +17,7 @@ public class backgroundManagement : MonoBehaviour {
 	void Update () {
 		if (ActualBackground.transform.position.x < -20.0f)
         {
-            ActualBackground =Instantiate(Background, new Vector3(47.5f, 0, 0), Quaternion.identity);
+            ActualBackground =Instantiate(Background, new Vector3(47f, 0, 0), Quaternion.identity);
         }
 	}
 }

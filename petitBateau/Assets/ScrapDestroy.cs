@@ -16,9 +16,10 @@ public class ScrapDestroy : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Limit")
+
+        if (other.gameObject.name == "ColliderLeft" || (other.gameObject.name == "ColliderRight" ))
         {
-            GameObject.Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

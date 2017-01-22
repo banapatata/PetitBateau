@@ -19,7 +19,8 @@ public class BirdCollision : MonoBehaviour
     {
         if (isPlayerKill)
         {   
-            transform.position += transform.up * Time.deltaTime * movementSpeed;
+            transform.position = transform.position +Vector3.up * Time.deltaTime * movementSpeed;
+            transform.localEulerAngles = (new Vector3(0,0,0.0f));
         }
     }
 
