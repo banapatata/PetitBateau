@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61211751053829276}
   - component: {fileID: 114301696605942690}
   - component: {fileID: 50915099045846202}
+  - component: {fileID: 95682343870182916}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Enemi
@@ -56,7 +57,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -78,6 +79,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!95 &95682343870182916
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177501887661582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5a564f11cca7114baabe82ef4d62207, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114301696605942690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrap: {fileID: 1889081930517344, guid: dc99ad4177892114e89c591b61c48ea4, type: 2}
   speed: 20
+  sprite1: {fileID: 21300000, guid: 16706a43dd696484bba8ece23e323b9b, type: 3}
+  sprite2: {fileID: 21300000, guid: 6f22ff7d096840f46946f649be750951, type: 3}
+  isTouchedByWave: 0
 --- !u!212 &212826516624925718
 SpriteRenderer:
   m_ObjectHideFlags: 1

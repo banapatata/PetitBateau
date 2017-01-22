@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: bfdcd9ad04b65014cbf204e9f252fd9a
-timeCreated: 1485025868
+guid: 3d76ed1a544c15d4d9089da9ed068141
+timeCreated: 1485026119
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spriteSheet-crate_0
-    21300002: spriteSheet-crate_1
-    21300004: spriteSheet-crate_2
-    21300006: spriteSheet-crate_3
-    21300008: spriteSheet-crate_4
-    21300010: spriteSheet-crate_5
-    21300012: spriteSheet-crate_6
+    21300000: spriteSheet-bird_idle_0
+    21300002: spriteSheet-bird_idle_1
+    21300004: spriteSheet-bird_idle_2
+    21300006: spriteSheet-bird_idle_3
+    21300008: spriteSheet-bird_idle_4
+    21300010: spriteSheet-bird_idle_5
+    21300012: spriteSheet-bird_idle_6
+    21300014: spriteSheet-bird_idle_7
+    21300016: spriteSheet-bird_idle_8
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -47,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -77,91 +79,117 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spriteSheet-crate_0
+      name: spriteSheet-bird_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_1
+      name: spriteSheet-bird_idle_1
       rect:
         serializedVersion: 2
-        x: 500
+        x: 400
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_2
+      name: spriteSheet-bird_idle_2
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 800
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_3
+      name: spriteSheet-bird_idle_3
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1200
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_4
+      name: spriteSheet-bird_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spriteSheet-bird_idle_5
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_5
+      name: spriteSheet-bird_idle_6
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 2400
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spriteSheet-crate_6
+      name: spriteSheet-bird_idle_7
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 2800
         y: 0
-        width: 500
-        height: 500
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spriteSheet-bird_idle_8
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
