@@ -204,7 +204,8 @@ MonoBehaviour:
   speed: 20
   sprite1: {fileID: 21300000, guid: 16706a43dd696484bba8ece23e323b9b, type: 3}
   sprite2: {fileID: 21300000, guid: 6f22ff7d096840f46946f649be750951, type: 3}
-  isTouchedByWave: 0
+  IsTouchByWave: 0
+  forceToBreak: 5.1
 --- !u!212 &212826516624925718
 SpriteRenderer:
   m_ObjectHideFlags: 1

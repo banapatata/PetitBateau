@@ -14,8 +14,13 @@ public class waveBehavior : MonoBehaviour {
 
 	// *** Variables modifiables ***
 	private float ttl = 2;
+    [SerializeField]
+    private float power = 1;
+    [SerializeField]
 	private float minForce = 5f;
-	private float maxForce = 10f;
+    [SerializeField]
+    private float maxForce = 10f;
+	private float maxSize = 1;
 	// ***
 
 	void Start () {
@@ -34,6 +39,12 @@ public class waveBehavior : MonoBehaviour {
             vector *= maxForce;
         }
 
+        if (vector.magnitude < minForce)
+        {
+            vector.Normalize();
+            vector *= minForce;
+        }
+
         float magni = vector.magnitude;
         float newmagni = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<WaveBarBehavior>().UpdateWaveBar(magni);
         if (newmagni != magni)
@@ -41,10 +52,7 @@ public class waveBehavior : MonoBehaviour {
             vector.Normalize();
             vector *= newmagni;
         }
-        if (vector.magnitude < minForce) {
-			vector.Normalize ();
-            vector *= minForce;
-        }
+      
         transform.right = vector;
 		float size = vector.magnitude / maxForce;
 		transform.localScale = new Vector3 (1, size, 1);

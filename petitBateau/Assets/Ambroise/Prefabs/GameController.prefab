@@ -56,8 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSpawn: 1
   Rock: {fileID: 1370432834764432, guid: ac725dda7ed819f4c92f1fdf44013baf, type: 2}
-  Bird: {fileID: 1364710431333812, guid: 22d711a459648574bbdfbe48c662a8bc, type: 2}
-  Crate: {fileID: 1177501887661582, guid: 4fb821edf17276e4e913bd4cc9eab44c, type: 2}
+  Bird: {fileID: 1782224288005394, guid: 951a04fb6c2997b40ab3586ca95c7a4a, type: 2}
 --- !u!114 &114494788920194994
 MonoBehaviour:
   m_ObjectHideFlags: 1

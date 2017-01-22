@@ -21,7 +21,10 @@ public class CraftWaveBehavior : MonoBehaviour
     private Sprite sprite2;
 
     [SerializeField]
-    private bool isTouchedByWave = false;
+    private bool IsTouchByWave = false;
+
+    [SerializeField]
+    private float forceToBreak = 5.0F;
 
 	private bool isAlive = true;
 
@@ -33,7 +36,7 @@ public class CraftWaveBehavior : MonoBehaviour
 
     public void HitByWave(Vector2 wave)
     {
-        isTouchedByWave = true;
+        IsTouchByWave = true;
         GetComponent<Rigidbody2D>().AddForce(wave * 2.0f, ForceMode2D.Impulse);
     }
 
@@ -46,7 +49,12 @@ public class CraftWaveBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Wave")
         {
+<<<<<<< HEAD
             if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < 6.0f && isAlive)
+=======
+
+            if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < forceToBreak)
+>>>>>>> refs/remotes/origin/master
             {
                 if (!other.gameObject.GetComponent<waveBehavior>().getBoatAlreadyTouched())
                 {
@@ -88,7 +96,7 @@ public class CraftWaveBehavior : MonoBehaviour
             GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().GameOver();
         }
 
-        if (other.gameObject.name == "ColliderLeft" || (other.gameObject.name == "ColliderRight" && isTouchedByWave))
+        if (other.gameObject.name == "ColliderLeft" || (other.gameObject.name == "ColliderRight" && IsTouchByWave))
         {
             Destroy(this.gameObject);
         }

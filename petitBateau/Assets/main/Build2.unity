@@ -209,6 +209,21 @@ Prefab:
       propertyPath: healthBarSlider
       value: 
       objectReference: {fileID: 542231657}
+    - target: {fileID: 114762209358991058, guid: 81ae597240baead4ab249c6e9323ef29,
+        type: 2}
+      propertyPath: Fill
+      value: 
+      objectReference: {fileID: 631519306}
+    - target: {fileID: 114762209358991058, guid: 81ae597240baead4ab249c6e9323ef29,
+        type: 2}
+      propertyPath: Bar
+      value: 
+      objectReference: {fileID: 542231657}
+    - target: {fileID: 114762209358991058, guid: 81ae597240baead4ab249c6e9323ef29,
+        type: 2}
+      propertyPath: minForce
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81ae597240baead4ab249c6e9323ef29, type: 2}
   m_IsPrefabParent: 0
@@ -443,6 +458,18 @@ Prefab:
       propertyPath: GameOverText
       value: 
       objectReference: {fileID: 86809995}
+    - target: {fileID: 114071387701881426, guid: 2217a65a1c5fd6b4e97bd495315fbb0c,
+        type: 2}
+      propertyPath: Crate
+      value: 
+      objectReference: {fileID: 1177501887661582, guid: 4fb821edf17276e4e913bd4cc9eab44c,
+        type: 2}
+    - target: {fileID: 114071387701881426, guid: 2217a65a1c5fd6b4e97bd495315fbb0c,
+        type: 2}
+      propertyPath: Bird
+      value: 
+      objectReference: {fileID: 1364710431333812, guid: 22d711a459648574bbdfbe48c662a8bc,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2217a65a1c5fd6b4e97bd495315fbb0c, type: 2}
   m_IsPrefabParent: 0

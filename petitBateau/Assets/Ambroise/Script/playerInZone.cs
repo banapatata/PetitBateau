@@ -28,7 +28,7 @@ public class playerInZone : MonoBehaviour
                 newState += 1;
                 transform.Find("Enemi").GetComponent<Charge>().setState(newState);
                 now = Time.time;
-				if (newState <= 5) {
+				if (newState == 6) {
 					isCharge = true;
 				}
             }
