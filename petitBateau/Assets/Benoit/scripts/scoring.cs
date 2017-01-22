@@ -13,6 +13,7 @@ public class scoring : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		highscore = PlayerPrefs.GetInt ("High Score", 0);
+		ScoreText.rectTransform.anchoredPosition = new Vector2 (-Screen.width * 0.4f, -Screen.height * 0.5f);
 		score = 0;
 	}
 	

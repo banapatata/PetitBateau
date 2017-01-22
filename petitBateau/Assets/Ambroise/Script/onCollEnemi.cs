@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class onCollEnemi : MonoBehaviour {
+	AudioSource audio;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Start () {
+		audio = GetComponent <AudioSource> ();
 	}
 
     void OnCollisionEnter2D(Collision2D other)
     {
        if(other.gameObject.tag == "Enemi")
         {
-           GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().GameOver();
-            
+			audio.Play ();
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().GameOver(); 
         } 
     }
 }
