@@ -8,7 +8,8 @@ public class setGameOver : MonoBehaviour {
     private Text GameOverText;
 
     private bool isAlive = true;
-        
+
+
     // Use this for initialization
     void Start () {
         GameOverText.text = "";
@@ -16,6 +17,11 @@ public class setGameOver : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (!isAlive && GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetInteger("GameOver", 1);   
+        }
         if (Input.GetKeyDown("space") && !isAlive)
         {
             Application.LoadLevel(Application.loadedLevel);
