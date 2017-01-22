@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298470029971014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41, y: -5.85, z: 0.0625}
+  m_LocalPosition: {x: -1, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSpawn: 1
   Rock: {fileID: 1370432834764432, guid: ac725dda7ed819f4c92f1fdf44013baf, type: 2}
-  Bird: {fileID: 1782224288005394, guid: 951a04fb6c2997b40ab3586ca95c7a4a, type: 2}
+  Bird: {fileID: 1364710431333812, guid: 22d711a459648574bbdfbe48c662a8bc, type: 2}
+  Crate: {fileID: 1177501887661582, guid: 4fb821edf17276e4e913bd4cc9eab44c, type: 2}
 --- !u!114 &114494788920194994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436e4b03d1f28e544bb1de69a8880b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 114787345890238294, guid: 20f7771e2054fd545814aaa94409724e,
+    type: 2}
 --- !u!114 &114896180308281464
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CraftWaveBehavior : MonoBehaviour
 {
-
+	private Animator anim;
+	private AudioSource audio;
     [SerializeField]
     private GameObject scrap;
 
@@ -25,17 +26,12 @@ public class CraftWaveBehavior : MonoBehaviour
     [SerializeField]
     private float forceToBreak = 5.0F;
 
+	private bool isAlive = true;
 
-    // Use this for initialization
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+		anim = GetComponent <Animator> ();
+		audio = GetComponent <AudioSource> ();
     }
 
     public void HitByWave(Vector2 wave)
@@ -53,8 +49,7 @@ public class CraftWaveBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Wave")
         {
-
-            if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < forceToBreak)
+			if (other.gameObject.GetComponent<waveBehavior>().getDirection().magnitude < forceToBreak && isAlive)
             {
                 if (!other.gameObject.GetComponent<waveBehavior>().getBoatAlreadyTouched())
                 {
@@ -64,7 +59,10 @@ public class CraftWaveBehavior : MonoBehaviour
             }
             else
             {
-                GetComponent<SpriteRenderer>().enabled = false;
+				isAlive = false;
+				anim.SetBool ("alive", isAlive);
+				audio.Play ();
+				GetComponent<BoxCollider2D>().enabled = false;
                 float random1 = Random.Range(-1.0f, 1.0f);
                 float random2 = Random.Range(-1.0f, 1.0f);
                 Actualscrap = Instantiate(scrap, transform.position + new Vector3(0.02f, 0.02f), Quaternion.identity);
@@ -79,8 +77,7 @@ public class CraftWaveBehavior : MonoBehaviour
                 Actualscrap = Instantiate(scrap, transform.position + new Vector3(0.02f, -0.02f), Quaternion.identity);
                 Actualscrap.GetComponent<Rigidbody2D>().AddForce(new Vector2(random1, random2) * speed);
                 Actualscrap.GetComponent<SpriteRenderer>().sprite = sprite2;
-
-                Destroy(this.gameObject);
+				// Dans l'animation à la fin de l'animation appel de la fonction Dye()
             }
         }
 
@@ -99,4 +96,8 @@ public class CraftWaveBehavior : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+	public void Dye () {
+		Destroy(this.gameObject);
+	}
 }
