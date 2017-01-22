@@ -30,9 +30,6 @@ public class boatBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-
-
         if (other.CompareTag("Wave"))
         {
             if (!other.GetComponent<waveBehavior>().getBoatAlreadyTouched())
