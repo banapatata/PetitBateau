@@ -174,11 +174,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4731590973724276, guid: 81ae597240baead4ab249c6e9323ef29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.56
+      value: -10.32
       objectReference: {fileID: 0}
     - target: {fileID: 4731590973724276, guid: 81ae597240baead4ab249c6e9323ef29, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.48
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4731590973724276, guid: 81ae597240baead4ab249c6e9323ef29, type: 2}
       propertyPath: m_LocalPosition.z
@@ -408,11 +408,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4543347058958746, guid: 2217a65a1c5fd6b4e97bd495315fbb0c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.53
+      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 4543347058958746, guid: 2217a65a1c5fd6b4e97bd495315fbb0c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.32
+      value: -5.85
       objectReference: {fileID: 0}
     - target: {fileID: 4543347058958746, guid: 2217a65a1c5fd6b4e97bd495315fbb0c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -443,6 +443,12 @@ Prefab:
       propertyPath: GameOverText
       value: 
       objectReference: {fileID: 86809995}
+    - target: {fileID: 114071387701881426, guid: 2217a65a1c5fd6b4e97bd495315fbb0c,
+        type: 2}
+      propertyPath: Crate
+      value: 
+      objectReference: {fileID: 1177501887661582, guid: 4fb821edf17276e4e913bd4cc9eab44c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2217a65a1c5fd6b4e97bd495315fbb0c, type: 2}
   m_IsPrefabParent: 0
