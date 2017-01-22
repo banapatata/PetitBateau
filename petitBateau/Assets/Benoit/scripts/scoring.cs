@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class scoring : MonoBehaviour {
+
+	[SerializeField]
+	private Text ScoreText;
 
 	static public int highscore = 0;
 	static public int score = 0;
@@ -14,7 +18,8 @@ public class scoring : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(ScoreText!=null) ScoreText.text = "Score : " + scoring.score;
+		if (!GameObject.FindGameObjectWithTag("GameController").GetComponent<setGameOver>().getIsAlive()) ScoreText.text = "";
 	}
 
 	static public void updateScore(){
