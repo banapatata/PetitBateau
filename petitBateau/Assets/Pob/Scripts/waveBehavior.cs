@@ -14,8 +14,6 @@ public class waveBehavior : MonoBehaviour {
 
 	// *** Variables modifiables ***
 	private float ttl = 2;
-	private float minForce = 5f;
-	private float maxForce = 10f;
     [SerializeField]
     private float power = 1;
     [SerializeField]
